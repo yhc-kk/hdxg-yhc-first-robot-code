@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main() 
+{
+    printf("Hello, World! 我的ARM电脑可以写C语言了！\n");
+    return 0;
+}
