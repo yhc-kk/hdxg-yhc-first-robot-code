@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float weight , tall , BMI;
+    scanf("%f %f" , &weight , &tall);
+    BMI = weight / pow(tall , 2);
+    printf("BMI = %.1f" , BMI);
+    return 0;
+}
