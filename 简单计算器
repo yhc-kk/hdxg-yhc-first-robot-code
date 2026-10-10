@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main() 
+{
+    int x , y , e;
+    char f;
+    scanf("%d" , &x);
+    scanf("%c" , &f);
+    scanf("%d" , &y);
+    if(f == '+')
+    {
+        e = x + y;
+    }
+    else if(f == '-')
+    {
+        e = x - y;
+    }
+    else if(f == '*')
+    {
+        e = x * y;
+    }
+    else if(f == '/')
+    {
+        if(y != 0)
+        {
+            e = x / y;
+        }
+        else
+        {
+            printf("Error: Divisor is 0\n");
+            return 1;
+        }
+    }
+    else if(f == '%')
+    {
+        e = x % y;
+    }
+    else
+    {
+        printf("Invalid operator\n");
+        return 1;
+    }
+    printf("%d",e);
+
+    return 0;
+}
