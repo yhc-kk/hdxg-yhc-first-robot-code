@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int random;
+    srand(time(0));
+    random = rand() % 100 + 1;
+    int number;
+    printf("%d\n" , random);
+    do
+    {
+        
+        printf("Please enter a number.\n");
+        scanf("%d" , &number);
+        if(number > random)
+        {
+            printf("This number is greater than the target number.\n");
+        }
+        else if(number < random)
+        {
+            printf("This number is less than the target number.\n");
+        }
+        else
+        {
+            printf("You guessed correctly.\n");
+            break;
+        }
+    }while(number != random);
+    return 0;
+
+}
