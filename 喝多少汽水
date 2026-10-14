@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int n , total , empty;
+    scanf("%d" , &n);
+    total = n;
+    empty = n;
+    while(1)
+    {
+        total = total + empty/2;
+        empty = empty/2 + empty%2;
+        if(empty < 2)
+        {
+            break;
+        }
+    }
+    printf("%d" , total);
+}
