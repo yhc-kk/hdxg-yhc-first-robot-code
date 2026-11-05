@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <windows.h>
+#define N 4
+
+int main()
+{
+    SetConsoleOutputCP(65001);
+    double num[N][N] = {0};
+    for(int i = 0; i < N; i++)
+    {
+        for(int j = 0; j < N; j++)
+        {
+            scanf("%lf" , &num[i][j]);
+        }
+    }
+    for(int i = 0; i < N; i++)
+    {
+        for(int j = 0; j < N; j++)
+        {
+            if(i > j)
+            {
+                int tmp = num[i][j];
+                num[i][j] = num[j][i];
+                num[j][i] = tmp;
+            }
+        }
+    }
+    for(int i = 0; i < N; i++)
+    {
+        for(int j = 0; j < N; j++)
+        {
+            printf("%8.2f" , num[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
